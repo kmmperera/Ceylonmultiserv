@@ -4,20 +4,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --footer-li-a-font-size:12px;
+    --footer-titles-font-size:16px;
+    --logo-description-size:10px;
+    --logo-width:66px;
+    --logo-height:66px;
+    --menu-li-a-size:16px;
+    --hero-title:64px;
+
+}
 body{
   overflow-x: auto;
   font-family: "Roboto" ,sans-serif;
-  
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #F6FCF8;
+ align-items: center;
+ 
+ 
 }
 
 #main-container{
-  
-
+    background-color: #F6FCF8;
+    max-width: 1600px;
 }
 #main-wrapper{
   margin: 0px 120px 0px 120px;
@@ -45,7 +57,7 @@ body{
 #nav-ul a{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: var(--menu-li-a-size);
     line-height: 28px;
     letter-spacing: 13%;
     font-weight: 400;
@@ -75,15 +87,21 @@ body{
    letter-spacing: 12%;
    font-size: 16px;
 }
+
+#logo-text , #footer-logo-description{
+   line-height: 1.9;
+   
+ }
 /* Hero section */
 
 #hero-title{
     font-family: "Playfair Display", serif;
     font-weight: 400;
     
-    font-size:80px;
+    font-size:var(--hero-title);
   
-    letter-spacing: -1%;
+    letter-spacing: 4px;
+    line-height: 1.1;
     
 }
 
@@ -93,53 +111,111 @@ body{
 }
 #hero-details-one{
     position: absolute;
-    top: -3rem;
+    top: 0rem;
     right: 1rem;
+    display: flex;
+    gap: 40px;
 }
 #clients-num{
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 #expierience-yr{
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+#clients-num-one{
+   font-size: 24px;
+   font-weight: 500;
+}
+#clients-num-two{
+   margin-top: 8px;
+   font-size: 16px;
+    font-weight: 300;
+}
+#expierience-yr-one{
+    font-size: 24px;
+    font-weight: 500;
+}
+#expierience-yr-two{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
 #hero-pics{
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    margin-top: 8px;
+    
    
 }
-#hero-pics img{
+.hero-img-container{
     max-width: 24%;
     aspect-ratio:325/273;
+    position: relative;
+  
+}
+#hero-pics img{
+    display: block;
+    border-radius: 24px;
+    object-fit: contain;
+    width: 100%;
     
 }
-#hero-details-two{
+.hero-img-container:nth-child(even)::before{
+    display: block;
+    content: "";
+   position: relative;
+    height: 54px;
+    width: 100%;
+    
+    border: none;
+
 
 }
+
+
+.hero-pro-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+#hero-details-two{
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    margin-top: 120px;
+}
 #sec-details-left{
-    width:200px;
+    width:230px;
+    font-size:12px ;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 
 }
 #sec-details-middle{
 
 }
 #sec-details-right{
+    background-color:#33B628;
+    color: white;
+    padding: 14px;
+    border-radius:100px;
+}
 
-}
-.hero-pro-pic{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-#hero-details-two{
-    display: flex;
-    gap: 24px;
+#lower-hero-title{
+
 }
 /* Main Area */
 
 #main-area{
-    margin-top: 100px;
+    margin-top: 120px;
     background-color: white;
     padding: 48px;
     border-radius: 48px;
@@ -147,15 +223,13 @@ body{
 #search-area{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+   
 }
 /* Articles */
-
-.autor-pic img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+#articles-area{
+    margin-top: 170px;
 }
+
 
 #articles-area{
     margin-bottom: 100px;
@@ -163,7 +237,50 @@ body{
 #top-article-container{
     display: flex;
     justify-content: space-between;
+    gap: 28px;
 
+}
+#article-area-left{
+    flex: 0.95;
+}
+#article-area-left .article-pic img{
+
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio:667/359;
+    border-radius: 24px;
+}
+#article-area-right{
+    flex:1;
+   
+}
+.right-article-conatiner{
+    display: flex;
+    gap: 30px;
+}
+.right-article-conatiner .article-pic {
+    aspect-ratio:333/296;
+    flex: 1;
+}
+.right-article-conatiner .article-pic img{
+   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    
+
+}
+.right-article-details{
+    flex: 1;
+    aspect-ratio:1/1;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.article-pic{
+   
 }
 #latest-articles-container{
     display: flex;
@@ -174,11 +291,40 @@ body{
     width: 30%;
 }
 .article-pic img{
-    max-width: 40%;
+   
 }
 .latest-article .article-pic img{
     max-width: 30%;
 }
+.article-author-details{
+    display: flex;
+}
+.article-date{
+    font-size: 12px;
+    
+}
+.article-title{
+    font-size: 16px;
+}
+.article-description{
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.autor-pic img{
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
 /* Pagination */
 
 #pagination-area{
@@ -208,7 +354,7 @@ body{
 }
 
 #footer-logo-area {
-    margin-top: 30px;
+    margin-top: 24px;
     display:flex;
     align-items: center;
     gap: 15px;
@@ -239,31 +385,31 @@ body{
     text-decoration: none;
     color: #D7F5E3;
     
-    font-size: 20px;
+    font-size: var(--footer-li-a-font-size);
     letter-spacing:1px ;
-    line-height:28px ;
+    line-height:1.5;
     font-weight: 300;
 }
 .footer-section-title{
-  margin-bottom: 36px;
-  font-size: 24px;
+  margin-bottom: 24px;
+  font-size: var(--footer-titles-font-size);
   letter-spacing:4px ;
   line-height:37px ;
   font-weight: 400;
 }
 #footer-divider-line{
-    margin-top: 64px;
+    margin-top: 40px;
     border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
 #footer-bottom-section{
-    margin-top: 29px;
-    margin-bottom: 34px;
+    margin-top: 25px;
+    margin-bottom: 29px;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: var(--footer-li-a-font-size);
     letter-spacing:1px ;
-    line-height:28px ;
+    line-height:1.5 ;
     font-weight: 300;
 
 }
@@ -275,32 +421,32 @@ body{
 #social-media-description{
     color: #D7F5E3;
     
-    font-size: 20px;
+    font-size: var(--footer-li-a-font-size);
     letter-spacing:1px ;
-    line-height:28px ;
+    line-height:1.5 ;
 }
 /* Media Querries */
 
 @media (max-width:1400px){
     #nav-ul a{
        
-        font-size: 18px;
+        font-size: var(--menu-li-a-size);
         line-height: 26px;
         
     }
     #logo-img img , #footer-logo img{
-        width: 102px;
-        height: 102px;
+        width: 85px;
+        height: 85px;
     }
     #logo-text , #footer-logo-description{
-       font-size: 14px;
-       line-height: 22px;
+       font-size:var(--logo-description-size);
+     
     }
     #main-wrapper{
         margin: 0px 100px 0px 100px;
     }
     #hero-title{
-        font-size: 68px;
+        font-size:var(--hero-title);
     }
 
 }
@@ -308,7 +454,7 @@ body{
 @media (max-width:1200px){
     #nav-ul a{
        
-        font-size: 16px;
+        font-size: var(--menu-li-a-size);
         line-height: 24px;
         
     }
@@ -318,13 +464,13 @@ body{
     }
     #logo-text , #footer-logo-description{
        font-size: 10px;
-       line-height: 18px;
+      
     }
     #main-wrapper{
         margin: 0px 80px 0px 80px;
     }
     #hero-title{
-        font-size: 56px;
+        font-size:var(--hero-title);
     }
 }
 @media (max-width:992px){
@@ -340,13 +486,13 @@ body{
     }
     #logo-text , #footer-logo-description{
        font-size: 8px;
-       line-height: 16px;
+     
     }
     #main-wrapper{
         margin: 0px 60px 0px 60px;
     }
     #hero-title{
-        font-size: 44px;
+        font-size:var(--hero-title);
     }
 }@media (max-width:768px){
     #nav-ul a{
@@ -361,13 +507,13 @@ body{
     }
     #logo-text , #footer-logo-description{
        font-size: 6px;
-       line-height: 14px;
+      
     }
     #main-wrapper{
         margin: 0px 40px 0px 40px;
     }
     #hero-title{
-        font-size:32px;
+        font-size:var(--hero-title);
     }
 }@media (max-width:576px){
     #nav-ul a{
@@ -382,12 +528,12 @@ body{
     }
     #logo-text , #footer-logo-description{
        font-size: 4px;
-       line-height: 9px;
+      
     }
     #main-wrapper{
         margin: 0px 16px 0px 16px;
     }
     #hero-title{
-        font-size: 24px;
+        font-size:var(--hero-title);
     }
 }
