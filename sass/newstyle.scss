@@ -146,10 +146,12 @@ body{
 #main-container{
     background-color: #F6FCF8;
     max-width: 1600px;
+    min-height: 100vh;
+    
 }
 #main-wrapper{
   margin: 0px 120px 0px 120px;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
