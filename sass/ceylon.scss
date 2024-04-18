@@ -23,6 +23,84 @@
 
 
 }
+
+@media(max-width:1400px){
+	:root{
+		--hero-left-title-fz:58px;
+		
+	
+		--hero-sub-head-fz:22px;
+	
+	
+		--hero-para-fz:18px;
+		
+	
+		--hero-section-head-fz:32px;
+	
+	}
+}
+
+@media(max-width:1200px){
+	:root{
+		--hero-left-title-fz:54px;
+		
+	
+		--hero-sub-head-fz:20px;
+	
+	
+		--hero-para-fz:16px;
+		
+	
+		--hero-section-head-fz:30px;
+	
+	}
+
+}
+@media(max-width:992px){
+	:root{
+		--hero-left-title-fz:50px;
+		
+	
+		--hero-sub-head-fz:20px;
+	
+	
+		--hero-para-fz:16px;
+		
+	
+		--hero-section-head-fz:30px;
+	
+	}
+}
+@media(max-width:768px){
+	:root{
+		--hero-left-title-fz:50px;
+		
+	
+		--hero-sub-head-fz:20px;
+	
+	
+		--hero-para-fz:16px;
+		
+	
+		--hero-section-head-fz:30px;
+	
+	}
+}
+@media(max-width:576px){
+	:root{
+		--hero-left-title-fz:36px;
+		
+	
+		--hero-sub-head-fz:16px;
+	
+	
+		--hero-para-fz:12px;
+		
+	
+		--hero-section-head-fz:20px;
+	
+	}
+}
 #main-container{
 
     width: 100%;
@@ -33,9 +111,21 @@
     justify-content: space-between;
 	gap: 24px;
 	margin-top: 134px;
+
+	@media (max-width:768px) {
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 48px;
+	}
 	#frnt-hero-left { 
+		max-width:500px;
+
 	  aspect-ratio:611/440;
 	  width: 611px;
+
+	  @media (max-width:768px) {
+		width: 90%;
+	  }
 		#frnt-hero-title { 
 			font-size: var(--hero-left-title-fz);
 			font-weight: var(--hero-left-title-fw);
@@ -82,6 +172,12 @@
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
+				@media (max-width:576px) {
+				// font-size: 18px;
+				// width: 90px;
+				// height: 30px;
+				
+				}
 			}
 
 			#frnt-hero-secondary-btn { 
@@ -115,18 +211,24 @@
 		// aspect-ratio:530/600;
 		gap: 12px;
 		}
+		@media (max-width:768px) {
+			order: -1;
+			width: initial;
+			height: 500px;
+			margin-bottom: 12px;
+		}
 
 		#left-pic-col { 
 			height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			gap: 48px;
+			
 			flex: 1;
 
 			@media (max-width:992px) {
 				
-				gap: 24px;
+				
 				}
 			#left-top-pic { 
 				aspect-ratio:251/200;
@@ -192,8 +294,9 @@
 	}
 
 	#left-green-bar { 
-		aspect-ratio:109/336;
-		width: 90px;
+		//aspect-ratio:109/336;
+		width: 6.5%;
+		height: 278px;
 		background-color: #17BC59;
 		position: absolute;
 		top: 140px;
@@ -201,8 +304,9 @@
 	}
 
 	#right-green-bar { 
-		aspect-ratio:109/336;
-		width: 90px;
+		//aspect-ratio:109/336;
+		width: 6.5%;
+		height: 278px;
 		background-color: #17BC59;
 		position: absolute;
 		top: 140px;
@@ -211,19 +315,34 @@
 	}
 
 	#team-members { 
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		display: flex;
+		//grid-template-columns: repeat(2, 1fr);
+		//grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+		//justify-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
 		padding: 0px 160px;
 		margin-top: 240px;
 		gap: 48px;
+		@media (max-width:992px) {
+			padding: 0px 120px;
+		}
+		@media (max-width:726px) {
+			padding: 0px 60px;
+		}
 		.team-member { 
 			padding: 32px;
 			background-color: #fff;
 			box-shadow: 4px 4px 16px rgba( #000000,8%);
 			max-width: 480px;
+			width: 45%;
+			@media (max-width:1300px) {
+				width: 90%
+			}
 			.team-member-pic { 
 				aspect-ratio:1/1;
-				width: 232px;
+				//width: 232px;
+				width: 50%;
 				margin: 0px auto;
 
 				img { 
@@ -244,6 +363,9 @@
 				letter-spacing: 3.4px;
 				text-align: center;
 				margin-top: 16px;
+				@media (max-width:768px) {
+					font-size: 28px;
+				}
 			}
 
 			.member-role { 
@@ -254,6 +376,9 @@
 				text-align: center;
 				margin-top: 8px;
 				color: #103920;
+				@media (max-width:768px) {
+					font-size: 20px;
+				}
 			}
 
 			.member-jobs { 
@@ -270,12 +395,18 @@
 						font-weight: 300;
 						line-height: 1.2;
 						letter-spacing: 2.4px;
+						@media (max-width:768px) {
+							font-size: 18px;
+						}
 					}
 
 					.job-link { 
 						.bi-chevron-right{
 							font-size: 18px;
 							-webkit-text-stroke: 1px;
+							@media (max-width:768px) {
+								font-size: 14px;
+							}
 						}
 
 					}
@@ -294,6 +425,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				@media (max-width:768px) {
+					font-size: 18px;
+
+				}
 				a { 
 
 				}
@@ -413,10 +548,17 @@
 		
 	}
 	#blog-post-container{ 
-		display: grid;
-		grid-template-columns: repeat(3,1fr);
+	//	display: grid;
+	//	grid-template-columns: repeat(3,1fr);
+	display: flex;
+	justify-content: space-between;
+	gap: 48px;
+	flex-wrap: wrap;
 		
-		margin-top: 170px;
+	margin-top: 170px;
+	@media (max-width:992px) {
+		justify-content: center;
+	}
 	.blog-post { 
 		max-width: 357px;
 		background-color: white;
