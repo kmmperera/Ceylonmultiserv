@@ -155,7 +155,7 @@
   #frnt-hero-area #frnt-hero-right {
     order: -1;
     width: initial;
-    height: 500px;
+    height: 300px;
     margin-bottom: 12px;
   }
 }
@@ -292,6 +292,11 @@
     font-size: 28px;
   }
 }
+@media (max-width: 576px) {
+  #our-team #team-members .team-member .member-name {
+    font-size: 20px;
+  }
+}
 #our-team #team-members .team-member .member-role {
   font-size: 24px;
   font-weight: 300;
@@ -304,6 +309,11 @@
 @media (max-width: 768px) {
   #our-team #team-members .team-member .member-role {
     font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  #our-team #team-members .team-member .member-role {
+    font-size: 16px;
   }
 }
 #our-team #team-members .team-member .member-jobs {
@@ -325,6 +335,11 @@
 @media (max-width: 768px) {
   #our-team #team-members .team-member .member-jobs .member-job .job-name {
     font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  #our-team #team-members .team-member .member-jobs .member-job .job-name {
+    font-size: 14px;
   }
 }
 #our-team #team-members .team-member .member-jobs .member-job .job-link .bi-chevron-right {
@@ -354,6 +369,13 @@
     font-size: 18px;
   }
 }
+@media (max-width: 576px) {
+  #our-team #team-members .team-member .see-more-btn {
+    font-size: 16px;
+    width: 150px;
+    height: 40px;
+  }
+}
 #our-services {
   margin-top: 380px;
 }
@@ -373,10 +395,21 @@
   position: relative;
   overflow-x: visible;
 }
+@media (max-width: 992px) {
+  #our-services #services-carrosel {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 #our-services #services-carrosel .services-slide {
   aspect-ratio: 412/304;
   width: 412px;
   height: 100%;
+}
+@media (max-width: 992px) {
+  #our-services #services-carrosel .services-slide {
+    margin-bottom: 48px;
+  }
 }
 #our-services #services-carrosel .services-slide img {
   object-fit: cover;
@@ -398,6 +431,11 @@
 #our-services #services-carrosel #prev-btn .bi-chevron-left {
   -webkit-text-stroke: 4px;
 }
+@media (max-width: 992px) {
+  #our-services #services-carrosel #prev-btn {
+    display: none;
+  }
+}
 #our-services #services-carrosel #next-btn {
   position: absolute;
   right: -24px;
@@ -413,6 +451,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 992px) {
+  #our-services #services-carrosel #next-btn {
+    display: none;
+  }
+}
 #our-services #services-carrosel #next-btn .bi-chevron-right {
   -webkit-text-stroke: 4px;
 }
@@ -423,6 +466,11 @@
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 4.5px;
+}
+@media (max-width: 768px) {
+  #our-services #services-description {
+    font-size: 18px;
+  }
 }
 #our-services #find-more-btn {
   text-align: center;
