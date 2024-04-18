@@ -39,6 +39,10 @@
                     font-weight:600;
                     letter-spacing: 12px;
                     line-height: 1.2;
+
+                    @media (max-width:992px) {
+                        font-size: 48px;
+                    }
                 }
 
                 #impressa-hero-description { 
@@ -87,7 +91,14 @@
             height: 310px;
             bottom: -155px;
             left: 0;
-           
+           @media (max-width:1500px) {
+               width: 95%;
+               
+           }
+           @media (max-width:992px) {
+          display: none;
+            
+        }
             #offer-list{ 
                 display: flex;
                 gap: 172px;
@@ -95,11 +106,20 @@
                 position: absolute;
                 left: 0;
                 bottom: 68px;
+                @media (max-width:1400px) {
+                //    gap: calc(100vw/10);
+                //    bottom: 36px;
+                }
                 .impressa-offer { 
 
                     .offer-pic { 
                         width: 227px;
                         height: 292px;
+                       // aspect-ratio:227/292;
+                     
+                        @media (max-width:992px) {
+                            width: 150px;
+                        }
 
                         img { 
                             width: 100%;
@@ -110,26 +130,32 @@
                     }
 
                     .offer-title { 
-                        font-size: 36px;
+                      //  font-size: calc(100vw / 40);
+                      font-size: 36px;
                         font-weight: 400;
                         letter-spacing: 9px;
                         line-height: 1.5;
                         margin-top: 40px;
                         color: white;
-
+                        @media (max-width:992px) {
+                          //  font-size: calc(100vw / 30);
+                        }
                     }
 
                     .offer-price { 
-                        font-size: 24px;
+                       // font-size: calc(100vw / 50);
+                       font-size: 24px;
                         font-weight: 300;
                         letter-spacing: 5px;
                         line-height: 1.2;
                         margin-top: 16px;
                         color: #F6D10D;
+
                     }
 
                     .offer-description { 
-                        font-size: 16px;
+                      //  font-size: calc(100vw / 60);
+                      font-size: 16px;
                         font-weight: 400;
                         letter-spacing: 1.6px;
                         line-height: 1.3;
@@ -154,10 +180,99 @@
 
 
         }
+       
+       
 
     }
 
+    #m-offer-area { 
+        display: none;
+       
+      
+        
+       @media (max-width:992px) {
+           display: block;
+          
+           
+       }
+        #offer-list{ 
+            display: flex;
+           
+          
+           flex-wrap: wrap;
+            margin: 24px 60px;
+            justify-content: center;
+            @media (max-width:992px) {
+               // flex-wrap: wrap;
+               // 
+               gap: 48px;
+            }
+            .impressa-offer { 
+                background-color: #062A55;
+                padding: 48px;
+                min-width: 300px;
+                width: 80%;
+                
+                .offer-pic { 
+                    width: 227px;
+                    height: 292px;
+                    margin: 0px auto;
+                   // aspect-ratio:227/292;
+                 
+                    @media (max-width:992px) {
+                        width: 150px;
+                    }
 
+                    img { 
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 24px;
+                    }
+                }
+
+                .offer-title { 
+                  //  font-size: calc(100vw / 40);
+                 
+                  font-size: 28px;
+                    font-weight: 400;
+                    letter-spacing: 9px;
+                    line-height: 1.5;
+                    margin-top: 40px;
+                    color: white;
+                   
+                    @media (max-width:992px) {
+                      //  font-size: calc(100vw / 30);
+                    }
+                }
+
+                .offer-price { 
+                   // font-size: calc(100vw / 50);
+                  
+                   font-size: 20px;
+                    font-weight: 300;
+                    letter-spacing: 5px;
+                    line-height: 1.2;
+                    margin-top: 16px;
+                    color: #F6D10D;
+
+                }
+
+                .offer-description { 
+                  //  font-size: calc(100vw / 60);
+                
+                  font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 1.6px;
+                    line-height: 1.3;
+                    color: white;
+                    margin-top: 8px;
+                    max-width: 90%;
+
+                }
+            }
+         }
+    }
     #impressa-services-area { 
         margin-top: 282px;
         padding: 0px 120px;
@@ -165,6 +280,10 @@
             margin-top: 160px;
             display: flex;
             gap: 64px;
+           @media (max-width:992px) {
+            flex-wrap: wrap;
+            justify-content: center;
+           }
             .impressa-service-left { 
                 width: 486px;
                 height: 470px;
@@ -217,6 +336,10 @@
                     left: 50%;
                     transform: translateX(-50%);
                     opacity: 0.65;
+
+                    @media (max-width:992px) {
+                        bottom: -84px;
+                    }
                     .bi-stars{
 
                     }
@@ -239,6 +362,11 @@
                 height: 433px;
                 
                 margin: 0px auto;
+                @media (max-width:992px) {
+                   aspect-ratio:1/1;
+                   width: 80%;
+                   height: 80%;
+                }
                 img { 
                     width: 100%;
                     height: 100%;
@@ -276,6 +404,7 @@
             box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.09);
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             #impressa-contact-bottom-left { 
                 text-align: center;
                 flex: 1;
@@ -371,6 +500,9 @@
     #impressa-reviews-area { 
         padding: 220px 120px 220px 120px;
         display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         #impressa-review-left { 
             flex: 1;
             padding: 220px 72px;
@@ -393,6 +525,10 @@
                 line-height: 1.3;
                 letter-spacing: 12px;
                 margin-top: 72px;
+
+                @media (max-width:992px) {
+                   font-size: 36px;
+                 }
 
             }
 
@@ -423,7 +559,7 @@
 
                     .impressa-review-description { 
                         font-size: 20px;
-                        font-weight: 300;
+                        font-weight: 400;
                         line-height: 1.3;
                         letter-spacing: 1.5px;
 
