@@ -1,0 +1,983 @@
+:root{
+
+   
+	--main-body-margin:0px 120px 0px 120px;
+	--footer-padding:20px 120px 20px 120px;
+	--logo-width:120px;
+	--logo-fz:20px;
+	--nav-li-fz:22px;
+	--footer-section-title-fz:16px;
+	--footer-section-title-mb:24px;
+	--footer-li-fz:14px;
+	--footer-li-mb:14px;
+
+    --sub-div-root-fz:10px;
+
+
+    --sections-horizontal-padding:0px 120px;
+
+
+    --hero-title-fz:64px;
+    --hero-description-fz:36px;
+    --hero-btn-fz:48px;
+
+    --offer-head-fz:36px;
+    --offer-price-fz:24px;
+    --offer-description-fz:16px;
+
+    --services-head-fz:48px;
+    --services-price-fz:36px;
+    --services-description-fz:20px;
+    --services-star-fz:72px;
+
+    --contact-head-fz:48px;
+    --contact-description-fz:32px;
+    --contact-place-name-fz:48px;
+    --contact-place-description-fz:32px;
+
+    --reviews-head-fz:64px;
+    --reviews-description-fz:24px;
+    --reviews-star-fz:24px;
+    --reviews-person-name-fz:24px;
+    --review-content-fz:20px;
+    
+
+
+}
+@media(max-width:1400px){
+	:root{
+		--main-body-margin:0px 100px 0px 100px;
+		--footer-padding:20px 100px 20px 100px;
+		--logo-width:100px;
+		--logo-fz:18px;
+		--nav-li-fz:20px;
+	
+        --sub-div-root-fz:8px;
+	}
+}
+
+@media(max-width:1200px){
+	:root{
+		--main-body-margin:0px 80px 0px 80px;
+		--footer-padding:20px 80px 20px 80px;
+		--logo-width:80px;
+		--logo-fz:16px;
+        --nav-li-fz:18px;
+        
+        --sub-div-root-fz:7px;
+	}
+}
+
+@media(max-width:992px){
+	:root{
+		--main-body-margin:0px 60px 0px 60px;
+		--footer-padding:20px 60px 20px 60px;
+		--logo-width:60px;
+		--logo-fz:14px;
+		--nav-li-fz:16px;
+
+        --sub-div-root-fz:5px;
+	}
+}
+
+@media(max-width:768px){
+	:root{
+		--main-body-margin:0px 40px 0px 40px;
+        --footer-padding:20px 40px 20px 40px;
+        
+        
+	}
+}
+
+
+@media(max-width:576px){
+	:root{
+        --sub-div-root-fz:5px;
+	}
+}
+/* Css reset */
+
+
+*,*::before,::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+ul{
+	list-style: none;
+}
+
+/* -------------- common  css ------------------     */
+
+#main-container{
+	background-color: #F6FCF8;
+	max-width: 1600px;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+
+.logo-section { 
+	display: flex;
+	font-size: 16px;
+	//gap: 2em;
+	align-items: center;
+	.logo-img-div{
+
+		aspect-ratio:1/1;
+		width: var(--logo-width);
+		
+		
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 100%;
+		}
+	}
+	.logo-description-div{
+		font-size: var(--logo-fz);
+		line-height: 1.5;
+		letter-spacing: 0.05em;
+		margin-left: 0.8em;
+	}
+}
+
+
+/*  -------------------sass  Css------------------  */
+
+
+
+#main-nav { 
+	margin:var(--main-body-margin);
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	position: relative;
+}
+	#logo-area { 
+		
+		#logo-img { 
+           
+
+			img { 
+              
+			}
+		}
+
+		#logo-text { 
+		
+			br { 
+
+			}
+		}
+	}
+	#nav-menus { 
+		position: relative;
+		
+		#m-logo-area { 
+			display: none;
+			margin: var(--main-body-margin);
+			margin-top: 30px;
+			#m-logo-img { 
+
+                
+            
+                img { 
+                  
+                }
+			}
+
+			#m-logo-text { 
+
+				br { 
+
+				}
+			}
+		}
+
+		.closebutton { 
+			display: none;
+		}
+
+		#nav-ul { 
+			display: flex;
+            justify-content: space-between;
+            align-items: center;
+			list-style: none;
+			
+			
+			.nav-li { 
+				font-size: var(--nav-li-fz);
+				margin-left: 1.9em;
+				.nav-a { 
+					text-decoration: none;
+                    color: black;
+                 
+                    font-size: var(--nav-li-fz);
+                    font-weight:400;
+                    line-height:1.3;
+                    letter-spacing:0.05em;
+ 
+				}
+			}
+		}
+    }
+	#nav-menus.active{
+		display: block;
+        position: fixed;
+        background-color: #fff;
+       // padding:0px 24px;
+        top: 0px;
+        pointer-events: all;
+        z-index: 300;
+        height: 100%;
+        width: 375px;
+        transform: translateX(300px);
+        transition: 0.5s all;
+		background: #F6FCF8;
+		
+		
+		
+
+        .closebutton{
+            position: absolute;
+            top: 30px;
+            right: 12px; 
+            color: red;   
+		}
+		#nav-ul{
+			position: relative;
+			margin: var(--main-body-margin);
+			margin-top: 24px; 
+			
+			
+			  .nav-li { 
+				 margin-bottom: 12px;
+				 margin-left: initial;
+				  .nav-a { 
+  
+				  }
+				 
+			  }
+			 
+		  }
+    }
+	.overlay-div { 
+        position: fixed;
+        inset:0;
+        background-color: rgba(0,0,0, 0.5);
+        pointer-events: none;
+        opacity: 0;
+        z-index: 200;
+        transition: 0.2 ease-in;
+	}
+	.overlay-div.active{
+        opacity: 1;
+        pointer-events: all;
+    
+    }
+	.bi-list { 
+		display: none;
+        cursor: pointer;
+        color: #33B628;
+        -webkit-text-stroke: 1px;
+        font-size: 30px;
+
+	}
+	.bi-x-square{
+        display: none;
+        cursor: pointer;
+       
+        -webkit-text-stroke: 0.2px;
+        font-size: 18px;
+
+
+    }
+
+#impressa-hero-wrapper{ 
+        position: relative;
+        margin-top: 50px;
+      
+            #impressa-hero-area { 
+                font-size: var(--sub-div-root-fz);
+                width: 100%;
+                height: 122em;
+                display: flex;
+                justify-content: space-between;
+                background: linear-gradient(45deg,#AFFFCA 0% ,#FAFCF6 100%);
+                padding: var(--sections-horizontal-padding);
+                #impress-hero-left { 
+                    font-size: var(--sub-div-root-fz);
+                    padding-top: 20em;
+                    width: 86em;
+                   
+                    #impressa-hero-title { 
+                      //  font-size: var(--hero-title-fz);
+                        font-size: 6.4em;
+                        font-weight:600;
+                        letter-spacing: 0.2em;
+                        line-height: 1.2;
+    
+                       
+                    }
+    
+                    #impressa-hero-description { 
+                        font-size: 3.6em;
+                      //  font-size: var(--hero-description-fz);
+                        font-weight: 300;
+                        letter-spacing:0.04em;
+                        line-height: 1.5;
+                        margin-top: 1em; 
+                    }
+    
+                    #impressa-hero-btn { 
+                     //   font-size: var(--hero-btn-fz);
+                     font-size: 4.8em;
+                        font-weight: 400;
+                        letter-spacing: 0.02em;
+                        line-height: 1.5;
+                        margin-top: 0.75em;
+                        
+    
+                        span{
+
+                            color: white;
+                            padding:0.25em 0.75em;
+                            background-color: #2CC232;
+                            text-align: center;
+                            cursor: pointer;
+                            border-radius: 6px;
+                        }
+                    }
+                }
+    
+                #impressa-hero-right { 
+                font-size: var(--sub-div-root-fz);    
+                margin-top: 10.4em;
+                width: 44.3em;
+                height: 4.1em;
+    
+                    img { 
+    
+                    }
+                }
+            }
+    
+            #impressa-offer-area { 
+                font-size: var(--sub-div-root-fz);
+                position: absolute;
+                width: 150em;
+                max-width: 98%;
+                height:31em;
+                bottom: -15.5em;
+                left: 0;
+              @media(max-width:768px){
+                position: relative;
+                height: initial;
+              }
+                #offer-list{ 
+                    display: flex;
+                    gap: 17.2em;
+                    margin-left: 11.2em;
+                    position: absolute;
+                    left: 0;
+                    bottom: 6.8em;
+                    @media(max-width:768px){
+                        position: relative;
+                      flex-direction: column;
+                      }
+                    .impressa-offer { 
+                        font-size: var(--sub-div-root-fz);
+                        position: relative;
+                       
+                        .offer-pic { 
+                            width: 22.7em;
+                            height: 29.2em;
+                           // aspect-ratio:227/292;
+                            // position: relative;
+                           
+    
+                            img { 
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 2.4em;
+                            }
+                        }
+                       
+                        .offer-title { 
+                         
+                          //  font-size: var(--offer-head-fz);
+                            font-size: 3.6em;
+                            font-weight: 400;
+                            letter-spacing: 0.25em;
+                            line-height: 1.5;
+                            margin-top: 1.11em;
+                            color: white;
+                           
+                        }
+    
+                        .offer-price { 
+                           
+                           // font-size:var(--offer-price-fz);
+                           font-size: 2.4em;
+                            font-weight: 300;
+                            letter-spacing: 0.2em;
+                            line-height: 1.2;
+                            margin-top: 0.66em;
+                            color: #F6D10D;
+    
+                        }
+    
+                        .offer-description { 
+                         
+                          //  font-size:var(--offer-description-fz);
+                            font-size: 1.6em;
+                            font-weight: 400;
+                            letter-spacing: 0.1em;
+                            line-height: 1.3;
+                            color: white;
+                            margin-top: 0.5em;
+                            max-width: 90%;
+    
+                        }
+                    }
+                   
+                 }
+            }
+            #impressa-offer-area::before{
+                content: "";
+                display:block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+                background-color: #062A55;
+                height: 100%;
+                width: 100%;
+                
+                @media(max-width:768px){
+                   display: none;
+                    position: relative;
+                  }
+    
+            }
+           
+           
+    
+        }
+    
+
+#impressa-services-area { 
+            font-size: var(--sub-div-root-fz);
+            margin-top: 28.2em;
+            padding:var(--main-body-margin);
+            .impressa-service { 
+                font-size: var(--sub-div-root-fz);
+                margin-top: 16em; 
+                display: flex;
+                gap: 6.4em;
+               @media (max-width:992px) {
+                // flex-wrap: wrap;
+                // justify-content: center;
+               }
+                .impressa-service-left { 
+                    width: 48.6em;
+                    height: 47em;
+                    aspect-ratio:48.6/47;
+                    img { 
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 1.2em;
+                    }
+                }
+    
+                .impressa-service-right { 
+                    max-width: 70em;
+                    position: relative;
+                    .impressa-service-title { 
+                      //  font-size: var(--services-head-fz);
+                        font-size: 4.8em;
+                        font-weight: 500;
+                        letter-spacing: 0.1em;
+                        line-height: 1.3;
+                        margin-top: 1em;
+    
+     
+                    }
+    
+                    .impressa-service-price { 
+                        font-size: 3.6em;
+                        font-weight: 400;
+                        letter-spacing: 0.1em;
+                        line-height: 1.3;
+                        margin-top: 0.66em;
+                        color: #B69B10;
+    
+                    }
+    
+                    .impressa-service-description { 
+                        font-size:2em;
+                        font-weight: 300;
+                        letter-spacing: 0.1em;
+                        line-height: 1.3;
+                        margin-top: 1.8em;
+    
+                    }
+    
+                    .impressa-service-stars { 
+                        font-size: 7.2em;
+                        color: #B69B10;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: 0.65;
+    
+                        @media (max-width:992px) {
+                            bottom: -1.166em;
+                        }
+                        .bi-stars{
+    
+                        }
+                    }
+                }
+            }
+        }
+    
+#impress-contact-area { 
+           // display: none;
+            font-size: var(--sub-div-root-fz);
+            margin-top: 31em;
+            background-color: #F2F8F4;
+            padding: 27em 12em 32em 12em;
+            #impressa-contact-top { 
+                
+    
+    
+                #impressa-contact-pic { 
+                    width: 43.3em;
+                    height: 43.3em;
+                    
+                    margin: 0px auto;
+                    // @media (max-width:992px) {
+                    //    aspect-ratio:1/1;
+                    //    width: 80%;
+                    //    height: 80%;
+                    // }
+                    img { 
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 100%;
+                    }
+                }
+    
+                #impressa-contact-name { 
+                    text-align: center;
+                    font-size: 4.8em;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing:0.1em;
+                    margin-top: 72px;
+                }
+    
+                #impressa-contact-description { 
+                    width: 70%;
+                   
+                    margin: 0px auto;
+                    font-size: 3.2em;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    letter-spacing: 0.1em;
+                    margin-top: 2.25em;
+    
+                   
+                }
+            }
+    
+            #impressa-contact-bottom { 
+                margin-top: 27em;
+                background-color: rgba($color: #E5E5E5, $alpha: 0.47);
+                box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.09);
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                @media(max-width:768px) {
+                    flex-direction: column;
+                }
+                #impressa-contact-bottom-left { 
+                    text-align: center;
+                    flex: 1;
+                    position: relative;
+                    #impressa-contact-icon { 
+                        font-size: 6em;
+                        color: white;
+                        height: 2.13em;
+                        width: 2.13em;
+                        background-color: #2CC232;
+                        
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        left: 50%;
+                        top: -1em;
+                        transform: translateX(-50%);
+    
+                        i{
+                            display: block;
+                        }
+                    }
+    
+                    #impressa-contact-name { 
+                        font-size: 4.8em;
+                        font-weight: 600;
+                        line-height: 1.4;
+                        letter-spacing: 0.1em;
+                        margin-top: 2.08em;
+                    }
+    
+                    #impressa-contact-description { 
+                        font-size: 3.2em;
+                        font-weight: 500;
+                        line-height: 1.5;
+                        letter-spacing: 0.1em;
+                        margin-bottom: 7.5em;
+                        margin-top:2.5em;
+                       
+                       
+                    }
+                }
+    
+                #impressa-contact-bottom-right { 
+                    flex: 1;
+                   text-align: center;
+                  position: relative;
+                  font-size: var(--sub-div-root-fz);
+                    #impressa-contact-icon { 
+                        font-size: 6em;
+                        color: white;
+                        height: 2.13em;
+                        width: 2.13em;
+                        background-color: #2CC232;
+                      
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        right: 50%;
+                        top: -1em;
+                        transform: translateX(50%);
+                        i{
+                            display: block;
+                        }
+                        
+                    }
+    
+                    #impressa-contact-name { 
+                        font-size: 4.8em;
+                        font-weight:600;
+                        line-height: 1.4;
+                        letter-spacing:0.1em;
+                        margin-top: 2.08em;
+                    }
+    
+                    #impressa-contact-description { 
+                        font-size: 3.2em;
+                        font-weight: 500;
+                        line-height: 2;
+                        letter-spacing: 0.1em;
+                        margin-bottom: 7.5em;
+                        margin-top: 2.5em;
+                        br { 
+    
+                        }
+                    }
+                }
+            }
+        }
+    
+#impressa-reviews-area { 
+   
+            font-size: var(--sub-div-root-fz);
+            padding: var(--main-body-margin);
+            padding-top:22em;
+            padding-bottom:22em;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center; 
+          //  font-size: 10px;
+
+          @media(max-width:768px){
+            flex-direction: column;
+          }
+            #impressa-review-left { 
+                flex: 1;
+                padding: 22em 7.2em;
+                text-align: center;
+                .impressa-stars { 
+                    font-size: var(--reviews-star-fz);
+                    letter-spacing:0.33em;
+                    i{
+                        color: #CCBD61;
+    
+                    } 
+                }
+                #bottom-stars{
+                    margin-top: 2.75em;         
+                }
+    
+                #impressa-reviews-title { 
+                    font-size: 6.4em;
+                    font-weight: 600;
+                    line-height: 1.3;
+                    letter-spacing: 0.2em;
+                    margin-top: 1.125em;
+    
+                   
+    
+                }
+    
+                #impressa-reviews-description { 
+                    font-size: 2.4em;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    letter-spacing: 0.1em;
+                    margin-top: 2em;
+                }
+            }
+    
+            #impressa-review-right { 
+                flex: 1;
+                .impressa-review { 
+                    display: flex;
+                    margin-top: 6.4em;
+                    background-color:white;
+                    .review-green-bar { 
+                        background-color: #2CC232;
+                        width: 1.4em;
+    
+                    }
+    
+                    .impressa-review-core { 
+                        padding: 3em 2.2em 2.4em 5em;
+                           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.08);
+    
+                        .impressa-review-description { 
+                            font-size:2.4em;
+                            font-weight: 400;
+                            line-height: 1.3;
+                            letter-spacing: 0.075em;
+    
+                        }
+    
+                        .impressa-review-author { 
+                            display: flex;
+                            gap: 1.6em;
+                            margin-top: 3.2em;
+                            align-items: center;
+    
+                            .impressa-review-author-pic { 
+                                width: 7.5em;
+                                height: 7.5em;
+                                img { 
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 100%;
+    
+                                }
+                            }
+    
+                            .impressa-review-author-name { 
+                                font-size:2.4em;
+                                font-weight: 500;
+                                line-height: 1.4;
+                                letter-spacing: 0.05em;
+    
+                                .author-role { 
+                                    color: #127A16;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+#footer { 
+	//margin:var(--main-body-margin);
+	background-color: #10182F;
+	color: white;
+	padding: var(--footer-padding);
+}
+
+		#footer-logo-area { 
+		
+			#footer-logo { 
+
+				
+				
+				img { 
+				
+
+				}
+			}
+
+			#footer-logo-description { 
+
+				br { 
+
+				}
+			}
+		}
+
+		#footer-section-wrapper { 
+			display: flex;
+			justify-content: space-between;
+			margin-top: 120px;
+			flex-wrap: wrap;
+			div { 
+
+				.footer-section-title { 
+				font-size: var(--footer-section-title-fz);
+				margin-bottom: var(--footer-section-title-mb);
+				line-height: 1.3;
+				font-weight: 400;
+				letter-spacing:0.25em;
+			
+
+				}
+
+				.footer-links-ul { 
+					padding-right: 48px;
+					.footer-li { 
+						font-size: var(--footer-li-fz);
+						margin-bottom: var(--footer-li-mb);
+						letter-spacing: 1px;
+
+						.footer-li-a { 
+						
+						}
+					}
+				}
+
+				#social-media-description{
+					font-size: var(--footer-li-fz);
+					letter-spacing: 1px;
+					line-height: 1.5;
+				}
+			}
+
+			
+		}
+
+		#footer-divider-line { 
+			width: 100%;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			margin-top: 48px;
+		}
+
+		#footer-bottom-section { 
+			display: flex;
+			justify-content: space-between;
+		    margin-top: 25px;
+			margin-bottom: 29px;
+			letter-spacing: 1px;
+			#footer-bttm-left { 
+
+			}
+
+			#footer-bttm-middle { 
+				display: flex;
+				justify-content: space-between;
+				gap: 24px;
+	
+				#footer-middle-one { 
+
+				}
+
+				#footer-middle-two { 
+
+				}
+			}
+
+			#footer-bttm-right { 
+
+				.bi { 
+
+				}
+
+				.language-dropdown { 
+
+				}
+			}
+		}
+
+
+
+
+/* ------------------------ Media querries--------------------------   */
+
+
+
+
+
+
+@media (max-width:768px){
+    #main-nav  {
+       #nav-menus{
+	//	pointer-events: none;
+		position: fixed;
+		left: -300px;
+		top: 0;
+		#nav-ul{
+			flex-direction: column;
+			align-items: initial;
+		}
+	   }
+        #nav-menus.active{  
+			pointer-events: all;
+			
+			#m-logo-area{
+				display: flex;
+			}
+			
+		}
+		
+        .bi-x-square.active{
+			display: inline-block;
+			
+        }
+        .bi-list.active{
+            display: inline-block;
+        }
+    }
+    
+    
+}
