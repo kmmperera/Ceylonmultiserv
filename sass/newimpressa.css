@@ -65,11 +65,12 @@
   :root {
     --main-body-margin:0px 40px 0px 40px;
     --footer-padding:20px 40px 20px 40px;
+    --sub-div-root-fz:4px;
   }
 }
 @media (max-width: 576px) {
   :root {
-    --sub-div-root-fz:5px;
+    --sub-div-root-fz:3px;
   }
 }
 /* Css reset */
@@ -243,10 +244,25 @@ ul {
   background: linear-gradient(45deg, #AFFFCA 0%, #FAFCF6 100%);
   padding: var(--sections-horizontal-padding);
 }
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area {
+    flex-direction: column;
+    justify-content: initial;
+    padding: var(--main-body-margin);
+    position: relative;
+  }
+}
 #impressa-hero-wrapper #impressa-hero-area #impress-hero-left {
   font-size: var(--sub-div-root-fz);
   padding-top: 20em;
   width: 86em;
+}
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impress-hero-left {
+    width: initial;
+    max-width: 90%;
+    padding-top: 10em;
+  }
 }
 #impressa-hero-wrapper #impressa-hero-area #impress-hero-left #impressa-hero-title {
   font-size: 6.4em;
@@ -282,6 +298,14 @@ ul {
   width: 44.3em;
   height: 4.1em;
 }
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-hero-area #impressa-hero-right img {
+    position: absolute;
+    bottom: 5em;
+    right: 3em;
+    width: 60em;
+  }
+}
 #impressa-hero-wrapper #impressa-offer-area {
   font-size: var(--sub-div-root-fz);
   position: absolute;
@@ -295,6 +319,7 @@ ul {
   #impressa-hero-wrapper #impressa-offer-area {
     position: relative;
     height: initial;
+    padding: var(--main-body-margin);
   }
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list {
@@ -309,15 +334,23 @@ ul {
   #impressa-hero-wrapper #impressa-offer-area #offer-list {
     position: relative;
     flex-direction: column;
+    margin: 0;
   }
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer {
   font-size: var(--sub-div-root-fz);
   position: relative;
 }
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer {
+    display: flex;
+    gap: 6em;
+  }
+}
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-pic {
   width: 22.7em;
   height: 29.2em;
+  aspect-ratio: 227/292;
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-pic img {
   width: 100%;
@@ -325,7 +358,16 @@ ul {
   object-fit: cover;
   border-radius: 2.4em;
 }
-#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-title {
+@media (max-width: 768px) {
+  #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper {
+    flex-grow: 1;
+    background-color: #062A55;
+    height: 29.2em;
+    padding: 2.4em;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  }
+}
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-title {
   font-size: 3.6em;
   font-weight: 400;
   letter-spacing: 0.25em;
@@ -333,7 +375,7 @@ ul {
   margin-top: 1.11em;
   color: white;
 }
-#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-price {
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-price {
   font-size: 2.4em;
   font-weight: 300;
   letter-spacing: 0.2em;
@@ -341,7 +383,7 @@ ul {
   margin-top: 0.66em;
   color: #F6D10D;
 }
-#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-description {
+#impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-description {
   font-size: 1.6em;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -381,7 +423,6 @@ ul {
 }
 #impressa-services-area .impressa-service .impressa-service-left {
   width: 48.6em;
-  height: 47em;
   aspect-ratio: 48.6/47;
 }
 #impressa-services-area .impressa-service .impressa-service-left img {
