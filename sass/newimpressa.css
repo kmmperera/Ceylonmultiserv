@@ -66,6 +66,9 @@
     --main-body-margin:0px 40px 0px 40px;
     --footer-padding:20px 40px 20px 40px;
     --sub-div-root-fz:4px;
+    --logo-fz:12px;
+    --footer-li-fz:12px;
+    --footer-section-title-fz:14px;
   }
 }
 @media (max-width: 576px) {
@@ -181,7 +184,7 @@ ul {
   pointer-events: all;
   z-index: 300;
   height: 100%;
-  width: 375px;
+  width: clamp(300px, 90%, 350px);
   transform: translateX(300px);
   transition: 0.5s all;
   background: #F6FCF8;
@@ -368,15 +371,15 @@ ul {
   }
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-title {
-  font-size: 3.6em;
+  font-size: 5em;
   font-weight: 400;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.1em;
   line-height: 1.5;
-  margin-top: 1.11em;
+  margin-top: 0.5em;
   color: white;
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-price {
-  font-size: 2.4em;
+  font-size: 3.5em;
   font-weight: 300;
   letter-spacing: 0.2em;
   line-height: 1.2;
@@ -384,7 +387,7 @@ ul {
   color: #F6D10D;
 }
 #impressa-hero-wrapper #impressa-offer-area #offer-list .impressa-offer .offer-details-wrapper .offer-description {
-  font-size: 1.6em;
+  font-size: 3em;
   font-weight: 400;
   letter-spacing: 0.1em;
   line-height: 1.3;
@@ -435,12 +438,22 @@ ul {
   max-width: 70em;
   position: relative;
 }
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right {
+    max-width: 60%;
+  }
+}
 #impressa-services-area .impressa-service .impressa-service-right .impressa-service-title {
   font-size: 4.8em;
   font-weight: 500;
   letter-spacing: 0.1em;
   line-height: 1.3;
   margin-top: 1em;
+}
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right .impressa-service-title {
+    margin-top: 0;
+  }
 }
 #impressa-services-area .impressa-service .impressa-service-right .impressa-service-price {
   font-size: 3.6em;
@@ -456,6 +469,13 @@ ul {
   letter-spacing: 0.1em;
   line-height: 1.3;
   margin-top: 1.8em;
+}
+@media (max-width: 768px) {
+  #impressa-services-area .impressa-service .impressa-service-right .impressa-service-description {
+    margin-top: 1em;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
 }
 #impressa-services-area .impressa-service .impressa-service-right .impressa-service-stars {
   font-size: 7.2em;
@@ -639,6 +659,11 @@ ul {
   letter-spacing: 0.1em;
   margin-top: 2em;
 }
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-left #impressa-reviews-description {
+    font-size: 3em;
+  }
+}
 #impressa-reviews-area #impressa-review-right {
   flex: 1;
 }
@@ -660,6 +685,11 @@ ul {
   font-weight: 400;
   line-height: 1.3;
   letter-spacing: 0.075em;
+}
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-description {
+    font-size: 3em;
+  }
 }
 #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author {
   display: flex;
@@ -683,6 +713,11 @@ ul {
   line-height: 1.4;
   letter-spacing: 0.05em;
 }
+@media (max-width: 768px) {
+  #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-name {
+    font-size: 3.5em;
+  }
+}
 #impressa-reviews-area #impressa-review-right .impressa-review .impressa-review-core .impressa-review-author .impressa-review-author-name .author-role {
   color: #127A16;
 }
@@ -698,6 +733,16 @@ ul {
   justify-content: space-between;
   margin-top: 120px;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  #footer-section-wrapper {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #footer-section-wrapper div {
+    margin-bottom: 40px;
+  }
 }
 #footer-section-wrapper div .footer-section-title {
   font-size: var(--footer-section-title-fz);
@@ -732,6 +777,11 @@ ul {
   margin-top: 25px;
   margin-bottom: 29px;
   letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  #footer-bottom-section {
+    font-size: 8px;
+  }
 }
 #footer-bottom-section #footer-bttm-middle {
   display: flex;

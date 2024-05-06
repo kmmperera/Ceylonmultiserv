@@ -86,6 +86,11 @@
         --footer-padding:20px 40px 20px 40px;
         
         --sub-div-root-fz:4px;
+
+        --logo-fz:12px;
+        --footer-li-fz:12px;
+        --footer-section-title-fz:14px;
+      
         
 	}
 }
@@ -251,7 +256,8 @@ ul{
         pointer-events: all;
         z-index: 300;
         height: 100%;
-        width: 375px;
+        width: clamp(300px,90%,350px);
+        
         transform: translateX(300px);
         transition: 0.5s all;
 		background: #F6FCF8;
@@ -459,15 +465,17 @@ ul{
                             padding: 2.4em;
                            // border-radius: 1.2em;
                             clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+                            
                             }
                                 .offer-title { 
                                 
                                 //  font-size: var(--offer-head-fz);
-                                    font-size: 3.6em;
+                                   // font-size: 3.6em;
+                                   font-size: 5em;
                                     font-weight: 400;
-                                    letter-spacing: 0.25em;
+                                    letter-spacing: 0.1em;
                                     line-height: 1.5;
-                                    margin-top: 1.11em;
+                                    margin-top: 0.5em;
                                     color: white;
                                 
                                 }
@@ -475,7 +483,8 @@ ul{
                                 .offer-price { 
                                 
                                 // font-size:var(--offer-price-fz);
-                                font-size: 2.4em;
+                               // font-size: 2.4em;
+                                    font-size: 3.5em;
                                     font-weight: 300;
                                     letter-spacing: 0.2em;
                                     line-height: 1.2;
@@ -487,7 +496,7 @@ ul{
                                 .offer-description { 
                                 
                                 //  font-size:var(--offer-description-fz);
-                                    font-size: 1.6em;
+                                    font-size: 3em;
                                     font-weight: 400;
                                     letter-spacing: 0.1em;
                                     line-height: 1.3;
@@ -534,9 +543,8 @@ ul{
                 margin-top: 16em; 
                 display: flex;
                 gap: 6.4em;
-               @media (max-width:992px) {
-                // flex-wrap: wrap;
-                // justify-content: center;
+               @media (max-width:768px) {
+                //margin-top: 0;
                }
                 .impressa-service-left { 
                     width: 48.6em;
@@ -553,6 +561,9 @@ ul{
                 .impressa-service-right { 
                     max-width: 70em;
                     position: relative;
+                    @media (max-width:768px) {
+                        max-width: 60%;
+                       }
                     .impressa-service-title { 
                       //  font-size: var(--services-head-fz);
                         font-size: 4.8em;
@@ -561,7 +572,9 @@ ul{
                         line-height: 1.3;
                         margin-top: 1em;
     
-     
+                        @media (max-width:768px) {
+                            margin-top: 0;
+                           }
                     }
     
                     .impressa-service-price { 
@@ -580,6 +593,11 @@ ul{
                         letter-spacing: 0.1em;
                         line-height: 1.3;
                         margin-top: 1.8em;
+                        @media (max-width:768px) {
+                            margin-top:1em;
+                            font-size: 3em;
+                            margin-bottom: 0.5em;
+                           }
     
                     }
     
@@ -806,6 +824,10 @@ ul{
                     line-height: 1.5;
                     letter-spacing: 0.1em;
                     margin-top: 2em;
+
+                    @media(max-width:768px){
+                        font-size: 3em;
+                      }
                 }
             }
     
@@ -830,7 +852,9 @@ ul{
                             font-weight: 400;
                             line-height: 1.3;
                             letter-spacing: 0.075em;
-    
+                            @media(max-width:768px){
+                                font-size: 3em;
+                              }
                         }
     
                         .impressa-review-author { 
@@ -856,7 +880,9 @@ ul{
                                 font-weight: 500;
                                 line-height: 1.4;
                                 letter-spacing: 0.05em;
-    
+                                @media(max-width:768px){
+                                    font-size: 3.5em;
+                                  }
                                 .author-role { 
                                     color: #127A16;
                                 }
@@ -899,16 +925,21 @@ ul{
 			display: flex;
 			justify-content: space-between;
 			margin-top: 120px;
-			flex-wrap: wrap;
+            flex-wrap: wrap;
+            @media(max-width:768px){
+                margin-top: 60px;
+              }
 			div { 
-
+                @media(max-width:768px){
+                    margin-bottom: 40px;
+                  }
 				.footer-section-title { 
 				font-size: var(--footer-section-title-fz);
 				margin-bottom: var(--footer-section-title-mb);
 				line-height: 1.3;
 				font-weight: 400;
 				letter-spacing:0.25em;
-			
+               
 
 				}
 
@@ -946,7 +977,10 @@ ul{
 			justify-content: space-between;
 		    margin-top: 25px;
 			margin-bottom: 29px;
-			letter-spacing: 1px;
+            letter-spacing: 1px;
+            @media(max-width:768px){
+                font-size: 8px;
+            }
 			#footer-bttm-left { 
 
 			}
