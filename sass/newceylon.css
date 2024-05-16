@@ -78,6 +78,7 @@
   #frnt-hero-area {
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 6em;
   }
 }
 #frnt-hero-area #frnt-hero-left {
