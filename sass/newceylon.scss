@@ -138,6 +138,8 @@
 
 	  @media (max-width:768px) {
 		width: 90%;
+		max-width: 70em;
+		margin-top: 24px;
 	  }
 		#frnt-hero-title { 
 			font-size: 6.4em;
@@ -240,6 +242,7 @@
 		}
 		@media (max-width:768px) {
 			order: -1;
+			widows: 80%;
 			// width: initial;
 			// height: 300px;
 			// margin-bottom: 12px;

@@ -88,6 +88,8 @@
 @media (max-width: 768px) {
   #frnt-hero-area #frnt-hero-left {
     width: 90%;
+    max-width: 70em;
+    margin-top: 24px;
   }
 }
 #frnt-hero-area #frnt-hero-left #frnt-hero-title {
@@ -164,6 +166,7 @@
 @media (max-width: 768px) {
   #frnt-hero-area #frnt-hero-right {
     order: -1;
+    widows: 80%;
   }
 }
 #frnt-hero-area #frnt-hero-right #left-pic-col {
